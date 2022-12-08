@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
-
+import { useSelector } from "react-redux";
+import TodoAdd from "./TodoAdd";
 const MainDiv = styled.div`
   width: 100vw;
   height: 100vh;
@@ -14,33 +14,22 @@ const TodoDiv = styled.div`
   border: 2px solid black;
   border-radius: 10px;
   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const TodoMain = () => {
-  const dispatch = useDispatch();
   const todos = useSelector((state) => state.todos);
-  const [todoValue, setTodoValue] = useState("");
-
-  const addTodo = (e) => {
-    dispatch({ type: "ADD_TODO", text: todoValue });
-    e.preventDefault();
-    setTodoValue("");
-  };
-  const handleChange = (e) => {
-    setTodoValue(e.target.value);
-  };
   return (
     <MainDiv>
       <TodoDiv>
-        <form onSubmit={addTodo}>
-          <input type="text" value={todoValue} onChange={handleChange} />
-          <input type="submit" />
-        </form>
         <ul>
           {todos.map((todo, index) => (
             <li key={index}>{todo.text}</li>
           ))}
         </ul>
+        <TodoAdd />
       </TodoDiv>
     </MainDiv>
   );
