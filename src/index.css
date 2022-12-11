@@ -1,13 +1,14 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "GoogleRubikViny";
+  src: url(./assets/fonts/RubikVinyl/RubikVinyl-Regular.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "GoogleSecularOne";
+  src: url(./assets/fonts/SecularOne/SecularOne-Regular.ttf);
+}
+
+:root {
+  --font-GoogleRubikViny: "GoogleRubikViny";
+  --font-GoogleSecularOne: "GoogleSecularOne";
 }

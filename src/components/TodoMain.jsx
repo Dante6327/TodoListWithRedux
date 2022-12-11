@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import TodoItem from "./TodoItem";
 import TodoAdd from "./TodoAdd";
 const MainDiv = styled.div`
   width: 100vw;
@@ -8,9 +8,15 @@ const MainDiv = styled.div`
   position: relative;
 `;
 
+const TitleDiv = styled.div`
+  font-family: var(--font-GoogleRubikViny);
+  font-size: 60px;
+  color: #87ceeb;
+`;
+
 const TodoDiv = styled.div`
   width: 40vw;
-  height: 500px;
+  height: 700px;
   border: 2px solid black;
   border-radius: 10px;
   position: absolute;
@@ -20,15 +26,11 @@ const TodoDiv = styled.div`
 `;
 
 const TodoMain = () => {
-  const todos = useSelector((state) => state.todos);
   return (
     <MainDiv>
       <TodoDiv>
-        <ul>
-          {todos.map((todo, index) => (
-            <li key={index}>{todo.text}</li>
-          ))}
-        </ul>
+        <TitleDiv>To Do List!!</TitleDiv>
+        <TodoItem />
         <TodoAdd />
       </TodoDiv>
     </MainDiv>
