@@ -12,11 +12,9 @@ const store = createStore(rootReducer);
 
 const render = () =>
   root.render(
-    <React.StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
   );
 
 render();

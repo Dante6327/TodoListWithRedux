@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { IoIosAddCircle } from "react-icons/io";
 import styled from "styled-components";
 
+let cnt = 0; //todo의 고유 값
 const InputArea = styled.div`
   position: absolute;
   width: 100%;
@@ -38,8 +39,10 @@ function TodoAdd() {
     setTodoValue(e.target.value);
   };
   const handleClick = () => {
-    dispatch({ type: "ADD_TODO", text: todoValue });
+    const obj = { id: cnt, text: todoValue, checked: false };
+    dispatch({ type: "ADD_TODO", item: obj });
     setTodoValue("");
+    cnt++;
   };
   return (
     <InputArea>
