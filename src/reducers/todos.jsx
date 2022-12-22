@@ -9,6 +9,9 @@ const todos = (state = [], action) => {
           : todo.item.checked
       );
       return state;
+    case "DELETE_TODO":
+      state = state.filter((todo) => todo.item.id !== action.id);
+      return state;
     default:
       return state;
   }

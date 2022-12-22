@@ -19,7 +19,7 @@ const InputElement = styled.input`
   height: 30px;
 `;
 
-export const StyledIoIosAddCircle = styled(IoIosAddCircle)`
+export const AddBtn = styled(IoIosAddCircle)`
   width: 30px;
   height: 40px;
   &:hover {
@@ -40,14 +40,16 @@ function TodoAdd() {
   };
   const handleClick = () => {
     const obj = { id: cnt, text: todoValue, checked: false };
-    dispatch({ type: "ADD_TODO", item: obj });
-    setTodoValue("");
-    cnt++;
+    if (todoValue !== "") {
+      dispatch({ type: "ADD_TODO", item: obj });
+      setTodoValue("");
+      cnt++;
+    }
   };
   return (
     <InputArea>
       <InputElement type="text" value={todoValue} onChange={handleChange} />
-      <StyledIoIosAddCircle onClick={handleClick} />
+      <AddBtn onClick={handleClick} />
     </InputArea>
   );
 }
