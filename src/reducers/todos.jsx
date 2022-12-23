@@ -12,6 +12,20 @@ const todos = (state = [], action) => {
     case "DELETE_TODO":
       state = state.filter((todo) => todo.item.id !== action.id);
       return state;
+    case "MODIFY_SET_TODO":
+      state.map((todo) =>
+        todo.item.id.toString() === action.id
+          ? (todo.item.isModify = !todo.item.isModify)
+          : todo.item.isModify
+      );
+      return state;
+    case "MODIFY_TEXT":
+      state.map((todo) =>
+        todo.item.id.toString() === action.id
+          ? (todo.item.text = action.value)
+          : todo.item.text
+      );
+      return state;
     default:
       return state;
   }

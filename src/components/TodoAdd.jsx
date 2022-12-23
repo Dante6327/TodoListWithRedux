@@ -39,7 +39,7 @@ function TodoAdd() {
     setTodoValue(e.target.value);
   };
   const handleClick = () => {
-    const obj = { id: cnt, text: todoValue, checked: false };
+    const obj = { id: cnt, text: todoValue, checked: false, isModify: false };
     if (todoValue !== "") {
       dispatch({ type: "ADD_TODO", item: obj });
       setTodoValue("");
