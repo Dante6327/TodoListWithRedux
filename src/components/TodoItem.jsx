@@ -56,6 +56,7 @@ const ModifyInput = styled.input`
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
+  width: 50%;
 `;
 
 function TodoItem() {

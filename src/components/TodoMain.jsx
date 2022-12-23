@@ -16,7 +16,7 @@ const TitleDiv = styled.div`
 
 const TodoDiv = styled.div`
   width: 80vw;
-  height: 700px;
+  height: 500px;
   border: 2px solid black;
   border-radius: 10px;
   position: absolute;
