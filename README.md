@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# git-pages link : https://dante6327.github.io/TodoListWithRedux/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-Redux를 이용한 TodoList 만들기
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### 프로젝트 계획 사유
 
-### `npm start`
+React를 사용하다보니 하위 컴포넌트에 props를 계속 넘기며 상태를 유지하는 단점이 보였습니다.
+프로젝트 단위가 커지고 하위 컴포넌트가 많아짐에 따라 코드가 가중화되고 복잡해질 것을 염두해
+상태 관리 라이브러리인 Redux를 사용해보고자 했습니다.
+비록 프로젝트의 규모는 작지만 리덕스의 사용법에 대해 익숙해질 수 있었습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 사용 기술
 
-### `npm test`
+1. React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+$npx create-react-app
+```
 
-### `npm run build`
+2. styled-components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+$npm install styled-components
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Redux
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$npm install redux react-redux
+```
 
-### `npm run eject`
+### 외부 라이브러리
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. 버튼 아이콘 - react-icon
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install react-icons --save
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. 글꼴 - google-fonts
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 구현 기능
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Todo Item 추가
+2. Todo Item 수정
+3. Todo Item 삭제
